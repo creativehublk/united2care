@@ -1,0 +1,22 @@
+
+RewriteEngine On    # Turn on the rewriting engine
+
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Home redirections
+
+
+RewriteRule    ^index/?$    index.php    [NC,L]
+RewriteRule    ^forum/?$    forum.php    [NC,L]
+
+RewriteRule    ^posts/?$    posts/posts.php    [NC,L]
+RewriteRule    ^post/?$    posts/single_post.php    [NC,L]
+RewriteRule    ^submit_post/?$    posts/submit_post.php    [NC,L]
+
+
+
+
+

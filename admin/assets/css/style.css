@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css?family=K2D'); /* font-family: 'K2D', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree'); /* font-family: 'Bai Jamjuree', sans-serif; */
+
+
+
+.title{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.title h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(7, 12, 26);
+    font-weight: 700;
+    font-family: 'K2D', sans-serif;
+    margin-bottom: 10px;
+}
+
+body{
+    padding-top: 80px;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+/* Footer Effects Design Cahnges */
+.main-footer{
+    margin: 0px;
+}
+.wrapper, .right-side {
+  min-height: calc(100vh - 120px);
+}
+
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+
+.orders_table tr td:last-child, .orders_table tr td:nth-child(6), .orders_table tr td:nth-child(7), .orders_table tr td:nth-child(8){ 
+    text-align: center;
+}
+
+.orders_table tr td:nth-child(5){
+    text-align: right;
+}
+.sub_title{
+    font-family: 'K2D', sans-serif !important;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(180, 185, 196);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+
+/* Material Box Design */
+.material-card{
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-top: 30px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.material-card:hover{
+    box-shadow: 0 5px 9px rgba(0,0,0,0.25), 0 2px 3px rgba(0,0,0,0.22);
+}
+.material-card .top-icon{
+    position: absolute;
+    background: black;
+    width: 40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    top: -20px;
+    box-shadow: 0 5px 9px rgba(0,0,0,0.25), 0 2px 3px rgba(0,0,0,0.22);
+}
+
+
+.material-card .top-icon i{
+    margin-top: 33%;
+}
+
+.material-card .amount_box p{
+    color: silver;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: inherit;
+}
+.material-card .amount_box h5{
+    color: rgb(56, 53, 53);
+    font-weight: 600;
+    font-size: 16px;
+    font-family: inherit;
+    letter-spacing: .8pt;
+}
+
+.material-card .amount_box h5 span{
+    color: rgb(139, 136, 136);
+    font-weight: 600;
+    font-size: 12px;
+}
+.material-card .text_box h5{
+    color: rgb(163, 159, 159);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: inherit;
+    letter-spacing: .8pt;
+    text-transform: capitalize;
+}
+.material-card .text_box a{
+    text-align: right;
+    font-size: 13px;
+    transition: .3s;
+}
+.material-card .text_box a:hover{
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: rgba(192, 192, 240, 0.705);
+    color: black;
+}
+
+.material-card.green{
+    background: #00a65a1a;
+}
+.material-card.green .top-icon {
+    background: #00a65a;
+}
+
+.material-card.blue{
+    background: #00bfef05;
+}
+.material-card.blue .top-icon {
+    background: #00c0ef;
+}
+
+
+.material-card.red{
+    background: #dd4c3909;
+}
+.material-card.red .top-icon {
+    background: #dd4b39;
+}
+
+
+.material-card.yellow{
+    background: #ffd50010;
+}
+.material-card.yellow .top-icon {
+    background: #ffd600;
+}
+
+
+.material-card.violet{
+    background: #6200ea0c;
+}
+.material-card.violet .top-icon {
+    background: #6200ea;
+}
+
+.material-card.color2{
+    background: #0096870c;
+}
+.material-card.color2 .top-icon {
+    background: #009688;
+}
+
+.stock_modal .stock_update_header h3, .stock_modal .stock_update_header img, .stock_modal .stock_update_header span{
+    /* display: inline; */
+    float: right;
+    margin-left: 3px;
+}
+.stock_modal .stock_update_header h3{
+    margin-top: 0px;
+}
+.stock_modal .stock_update_header img{
+    width: 50px;
+}
+.stock_modal .stock_update_header span{
+    padding: 2px 10px;
+}
+/* Loading Overlay Content */
+
+.loading-overlay {
+    display: table;
+    opacity: 0.7;
+    z-index: 99999 !important;
+}
+
+.loading-overlay-content {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 1.15em;
+    font-weight: bold;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.loading-overlay.loading-theme-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.loading-overlay.loading-theme-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.gallery-box {
+    padding: 10px;
+    box-shadow: 1px 1px 9px #00000024;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.gallery-box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.gallery-box .delete-gallery{
+    margin-bottom: 10px;
+}
+
+.product_desc_single br{
+    all: unset !important;
+    display: unset;
+    font-family: unset;
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    display: block !important;
+    margin: 1px 0 !important;
+}
+
+
+/* Switcher */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+    left: 4px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 0px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 0px;
+    top: 2px;
+    bottom: 0;
+    right: 0;
+}
+
+input:checked + .slider {
+    background-color: rgb(11, 168, 11);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(33, 243, 33);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.verification .switch{
+    width: 40px;
+    height: 25px;
+}
+.verification .slider::before{
+    height: 20px;
+    width: 16px;
+}
+
+
+/* Product Details VIew Vard */
+.upload_thumb_modal_box{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.upload_thumb_modal_box img{
+    width: 100%;
+    height: auto;
+}
+.upload_thumb_modal_box #croppic{
+    width: 400px; 
+    height: 250px;
+}
+
+/* Sub Cat */
+.upload_thumb_modal_box.category_pic_box #croppic{
+    width: 600px; 
+    height: 600px;
+}
+.upload_thumb_modal_box.category_pic_box img{
+    width: 100%;
+    height: auto;
+}
+/* End */
+
+/* Supplier Profile */
+.upload_thumb_modal_box.supplier_profile_crop #croppic{
+    width: 400px; 
+    height: 400px;
+}
+.upload_thumb_modal_box.supplier_profile_crop img{
+    width: 100%;
+    height: auto;
+}
+
+/* End */
+.single_product_box .show_home_box{
+    margin: 10px 0px;
+    text-align: center;
+}
+.single_product_box .product_img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.single_product_box .action_btn_box{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.single_product_box .heading{
+    font-size: 15px;
+    text-align: center;
+}
+.single_product_box .action_btn_box .btn{
+    margin: 0px 3px;
+}
+.single_product_box .artist{
+    text-align: center;
+    width: 100%;
+    margin: 4px 0px;
+}
+
+.product_details_thumb_view_box img {
+    width: 100px;
+    height: auto;
+    border: 2px solid silver;
+    border-radius: 5px;
+    box-shadow: 4px 5px 7px 2px #00000042;
+    margin-bottom: 10px;
+    
+}
+.product_details_thumb_view_box button{
+    margin-left: 10px;
+}
+
+/* Siingle Product */
+.product_view_title{
+    margin: 0;
+}
+.product_view_title h3{
+    margin-top: 0;
+}
+.product_desc_single{
+    border: 1px dashed silver;
+    margin: 15px;
+    border-radius: 5px;
+    background: rgb(245, 245, 245);
+}
+
+.post_comments_list{
+    list-style: none;
+}
+.post_comment{
+    border: 1px solid rgb(231, 229, 229);
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+.post_comment .deletebtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.post_comment small{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+}
