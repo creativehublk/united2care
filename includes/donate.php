@@ -9,7 +9,7 @@
                     </p>
                     <div class="btns">
                         <a href="#" data-toggle="modal" data-target="#donateCashModal" class="theme-btn reveal">Cash Donation</a>
-                        <a href="#" data-toggle="modal" data-target="#donateDryRationModal" class="theme-btn reveal">Donate Dry Rations</a>
+                        <!-- <a href="#" data-toggle="modal" data-target="#donateDryRationModal" class="theme-btn reveal">Donate Dry Rations</a> -->
                         <a href="#" data-toggle="modal" data-target="#donateKitsModal" class="theme-btn reveal">Donate Masks & Sanitizers</a>
                     </div>
                 </div>

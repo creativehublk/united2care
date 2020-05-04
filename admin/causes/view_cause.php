@@ -156,6 +156,58 @@ if($checkAccess == 1){ ?>
                                                 echo "<p>No Descriptions</p>";
                                             } ?>
                                         </div>
+
+                                        <?php 
+                                        $select_donations = mysqli_query($localhost, "SELECT * FROM `donations` WHERE `cause_id` = '$cause_id' AND `trx_payment_code` = '2' ORDER BY `id` DESC ");
+
+                                        if(mysqli_num_rows($select_donations) > 0){ ?>
+
+                                            <div class="col-lg-12">
+                                                
+                                                <h4>Donations</h4>
+
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Date</th>
+                                                            <th>Amount</th>
+                                                            <th>Name</th>
+                                                            <th>Email</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+
+                                                        <?php 
+                                                        $total_amount = 0;
+                                                        $no = 1;
+                                                        while($fetch_donation = mysqli_fetch_array($select_donations)){ 
+                                                            $total_amount += $fetch_donation['amount'];
+                                                            ?>
+
+                                                            <tr>
+                                                                <td><?php echo $no ?></td>
+                                                                <td><?php echo Date("d M Y", strtotime($fetch_donation['created'])) ?></td>
+                                                                <td><?php echo number_format($fetch_donation['amount'], 2) ?></td>
+                                                                <td><?php echo $fetch_donation['first_name'].' '.$fetch_donation['last_name'] ?></td>
+                                                                <td><?php echo $fetch_donation['email'] ?></td>
+                                                            </tr>
+
+                                                        <?php 
+                                                        $no++;
+                                                        } ?>
+
+                                                    </tbody>
+                                                </table>
+
+                                                <h3>Total Donation: <?php echo number_format($total_amount,2) ?></h3>
+
+                                            </div>
+                                            
+                                        <?php } ?>
+
+
                                     </div>
 
                                 </div>

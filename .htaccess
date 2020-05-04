@@ -16,7 +16,13 @@ RewriteRule    ^posts/?$    posts/posts.php    [NC,L]
 RewriteRule    ^post/?$    posts/single_post.php    [NC,L]
 RewriteRule    ^submit_post/?$    posts/submit_post.php    [NC,L]
 
+# Causes
+RewriteRule    ^causes/?$    causes/causes.php    [NC,L]
+RewriteRule    ^cause/?$    causes/view_cause.php    [NC,L]
+RewriteRule    ^submit_causes/?$    causes/submit_causes.php    [NC,L]
+RewriteRule    ^donation/?$    causes/donate.php    [NC,L]
+RewriteRule    ^status/?$    causes/donate_status.php    [NC,L]
 
 
-
-
+RewriteRule    ^blog/?$    blog/blog.php    [NC,L]
+RewriteRule    ^blog/post/?$    blog/blog_details.php    [NC,L]

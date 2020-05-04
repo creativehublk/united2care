@@ -1013,22 +1013,22 @@ img {
 }
 
 .pagination-wrapper .pg-pagination {
-    display: inline-block;
+    display: flex;
     overflow: hidden;
     list-style-type: none;
-    text-align: center;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .pagination-wrapper .pg-pagination li {
-    float: left;
-    margin-right: 10px;
+    margin-right: 0;
+    border: 2px solid transparent;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
-@media (max-width: 767px) {
-    .pagination-wrapper .pg-pagination li {
-        margin-right: 5px;
-    }
-}
 
 .pagination-wrapper .pg-pagination li:last-child {
     margin-right: 0;
@@ -1061,7 +1061,7 @@ img {
 }
 
 .pagination-wrapper-left {
-    text-align: left;
+    text-align: center;
 }
 
 .pagination-wrapper-right {
@@ -3975,9 +3975,13 @@ hero-style3
 .wpo-case-item {
     box-shadow: 0px 5px 9.8px 0.2px rgba(85, 85, 85, 0.07);
 }
-
+.wpo-case-img{
+    height: 200px;
+    width: 100%;
+}
 .wpo-case-text-top {
-    padding: 30px;
+    padding: 20px;
+    min-height: 160px;
 }
 
 .wpo-case-content ul {
@@ -4025,6 +4029,8 @@ hero-style3
 
 .wpo-case-img img {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .wpo-case-item {
@@ -4597,9 +4603,6 @@ hero-style3
     transition: all .3s;
 }
 
-.wpo-blog-item:hover .wpo-blog-content {
-    background: #0b58ba;
-}
 
 .wpo-blog-content span {
     transition: all .3s;
@@ -6142,7 +6145,6 @@ breadcumb-style
 
 .wpo-blog-pg-section .entry-meta>li:first-child {
     position: relative;
-    top: -12px;
 }
 
 .wpo-blog-pg-section .entry-meta>li:first-child img {
@@ -6502,7 +6504,6 @@ breadcumb-style
 
 .wpo-blog-single-section .entry-meta>li:first-child {
     position: relative;
-    top: -12px;
 }
 
 .wpo-blog-single-section .entry-meta>li:first-child img {
@@ -6693,25 +6694,6 @@ breadcumb-style
     color: #fff;
 }
 
-.wpo-blog-single-section .tag-share .share a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    font-size: 0.875rem;
-    text-align: center;
-    color: #525252;
-    border-radius: 50%;
-    padding: 0;
-    display: block;
-    border: 1px solid #dadada;
-}
-
-.wpo-blog-single-section .tag-share .share a:hover {
-    background: #0b58ba;
-    color: #fff;
-    border-color: #0b58ba;
-}
 
 .wpo-blog-single-section .author-box {
     padding: 45px 50px 35px;

@@ -61,7 +61,7 @@ if($checkAccess == 1){ ?>
 
                                             <div class="col-xs-12 col-md-6 form-group">
                                                 <label>Description</label>
-                                                <textarea class="form-control" name="dsc" placeholder="Description" row="50"></textarea>
+                                                <textarea class="form-control tinyMceEditor" name="dsc" placeholder="Description" row="50"></textarea>
                                             </div>
 
                                         </div>

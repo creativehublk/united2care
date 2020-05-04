@@ -56,7 +56,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         
         if($responseKeys["success"]) {
 
-            
 
             $validated_data = $gump->run($_POST);
 
@@ -87,6 +86,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 if($DBResult['result']){
 
                     $post_id = $DBResult['inserted_id'];
+
+                    // Insert Cities
+                    $cities = $_POST['cities'];
+                    foreach ($cities as $key => $city) {
+        
+                        $DBResult = $dbOpertionsObj->insertData('ad_post_cities', array(
+                            'ad_post_id' => $post_id,
+                            'city_id' => $city
+                        ));
+            
+                    }
 
                     $result = 1;
                     $message = 'New post '.$validated_data['title'].' has been created';

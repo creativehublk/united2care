@@ -1,5 +1,5 @@
 
-<div class="wpo-about-area section-padding">
+<div class="wpo-about-area section-padding bg_light_blue">
     <div class="container">
         <div class="row about_us_box">
 
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="wpo-about-area bg_light_blue section-padding">
+<div class="wpo-about-area section-padding">
     <div class="container">
         <div class="row about_us_box switch">
             
@@ -52,7 +52,7 @@
     </div>
 </div>
 
-<div class="wpo-about-area section-padding">
+<div class="wpo-about-area section-padding bg_light_blue">
     <div class="container">
         <div class="row about_us_box">
             <div class="colsm-12 box-text">

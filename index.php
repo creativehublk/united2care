@@ -58,6 +58,10 @@
         <?php include_once ROOT_PATH.'includes/slider.php' ?>
         <!-- end of hero slider -->
 
+        <!-- Valunteers hero -->
+        <?php include_once ROOT_PATH.'includes/volunteers.php' ?>
+        <!-- Valunteers slider -->
+
         <!-- start of hero -->
         <?php include_once ROOT_PATH.'includes/posts.php' ?>
         <!-- end of hero slider -->
@@ -66,13 +70,13 @@
         <?php include_once ROOT_PATH.'includes/mission.php' ?>
         <!-- wpo-mission-area end -->
 
+        <!-- Causes start -->
+            <?php include_once ROOT_PATH.'includes/causesBox.php' ?>
+        <!-- Causes end -->
+
         <!-- wpo-about-area start -->
         <?php include_once ROOT_PATH.'includes/about.php' ?>
         <!-- wpo-about-area end -->
-
-        <!-- Causes start -->
-        <?php include_once ROOT_PATH.'includes/causesBox.php' ?>
-        <!-- Causes end -->
 
         <!-- .wpo-counter-area start -->
         <?php include_once ROOT_PATH.'includes/tellProblems.php' ?>
@@ -82,7 +86,6 @@
         <?php include_once ROOT_PATH.'includes/requestKits.php' ?>
         <!-- world area end -->
 
-
         <!-- BLog start -->
         <?php include_once ROOT_PATH.'includes/ourGallery.php' ?>
         <!-- Blog end -->
@@ -90,6 +93,10 @@
         <!-- wpo-cta-area start -->
         <?php include_once ROOT_PATH.'includes/donate.php' ?>
         <!-- wpo-cta-area end -->
+
+        <!-- Blog start -->
+        <?php include_once ROOT_PATH.'includes/blog.php' ?>
+        <!-- Blog end -->
 
         <!-- Partners start -->
         <?php include_once ROOT_PATH.'includes/partners.php' ?>
@@ -109,11 +116,14 @@
     ================================================== -->
     <?php include_once ROOT_PATH.'imports/js.php' ?>
 
+    <script src="<?php echo URL ?>assets/js/homePagePosts.js"></script>
+
     <?php include_once ROOT_PATH.'modals/donateCashModal.php' ?>
     <?php include_once ROOT_PATH.'modals/donateKitsModal.php' ?>
     <?php include_once ROOT_PATH.'modals/requestKitsModal.php' ?>
     <?php include_once ROOT_PATH.'modals/donateDryRationModal.php' ?>
     <?php include_once ROOT_PATH.'modals/causeModal.php' ?>
+    <?php include_once ROOT_PATH.'modals/postModal.php' ?>
     <?php include_once ROOT_PATH.'modals/requestCausesModal.php' ?>
 
 

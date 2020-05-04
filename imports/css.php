@@ -14,4 +14,6 @@
 <link href="<?php echo URL ?>assets/css/nice-select.css" rel="stylesheet">
 <link href="<?php echo URL ?>assets/css/style.css?v=1" rel="stylesheet">
 
-<link href="<?php echo URL ?>assets/css/united.css?v=1" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+
+<link href="<?php echo URL ?>assets/css/united.css?v=3" rel="stylesheet">

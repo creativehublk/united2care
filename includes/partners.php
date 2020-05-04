@@ -10,6 +10,7 @@
         <div class="wpo-case-wrap">
             <div class="partners-logo-slider">
                 <img src="<?php echo URL ?>assets/images/united/partners/aog.jpg" alt="">
+                <img src="<?php echo URL ?>assets/images/united/partners/hopper.png" alt="">
                 <img src="<?php echo URL ?>assets/images/united/partners/orr.JPG" alt="">
                 <img src="<?php echo URL ?>assets/images/united/partners/pass.jpg" alt="">
                 <img src="<?php echo URL ?>assets/images/united/partners/sgs.jpg" alt="">

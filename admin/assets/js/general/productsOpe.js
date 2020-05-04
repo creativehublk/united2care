@@ -65,3 +65,23 @@ function showHide(e){
     });// ajax end 
 
 } //showHide()
+
+
+
+function addMoreList(){
+
+    var clone = $('.post-lists li:first-child').clone();
+    clone.find('input').val('');
+    $('.post-lists').append(clone);
+
+} //addMoreAmenities
+
+function removeList(e){
+
+    var rowCount = $('.post-lists li').length;
+    
+    if( Number(rowCount) > 1 ){
+        $(e).parents('li').remove();
+    }
+
+} //removeList()

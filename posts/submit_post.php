@@ -98,7 +98,7 @@ $search_keyword_view = '';
                                             </div>
                                             
                                             <div class="col-xs-12 col-lg-12 form-group">
-                                                <select name="sub_category" id="" class="form-control">
+                                                <select name="sub_category" id="" class="form-control select2">
                                                     <option value="0" disabled selected>Select Category</option>
 
                                                     <?php foreach ($sub_categories_array as $key => $value) { ?>
@@ -106,6 +106,21 @@ $search_keyword_view = '';
                                                         <option value="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></option>
                                                         
                                                     <?php } ?>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-xs-12 col-lg-12 form-group">
+                                                <label>Select Cities</label>
+                                                <select name="cities[]" id="" class="form-control select2" multiple>
+
+                                                <?php  
+                                                    $select_city = mysqli_query($localhost, "SELECT c.* FROM `cities` AS c "); 
+                                                    while($fetch_cities = mysqli_fetch_array($select_city)){ ?>
+
+                                                        <option value="<?php echo $fetch_cities['id'] ?>"><?php echo $fetch_cities['name'] ?></option>
+
+                                                <?php } // WHile ?>
+                                                    
                                                 </select>
                                             </div>
 

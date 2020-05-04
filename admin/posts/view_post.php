@@ -147,6 +147,144 @@ if($checkAccess == 1){ ?>
                                             } ?>
                                         </div>
 
+                                        <?php 
+                                        $selectedCitiesArray = array();
+                                        $select_selected_cities = mysqli_query($localhost, "SELECT * FROM `ad_post_cities` WHERE `ad_post_id` = '$post_id' ");
+                                        while($fetch_selected_cities = mysqli_fetch_array($select_selected_cities)){
+                                            array_push($selectedCitiesArray, $fetch_selected_cities['city_id']);
+                                        }
+                                        ?>
+
+                                        <div class="col-lg-12">
+                                            <h4>Cities</h4>
+
+                                            <div class="row">
+                                                
+                                                <form class="forms-sample" id="create_product_form"
+                                                    data-action-after=0
+                                                    data-redirect-url=""
+                                                    method="POST"
+                                                    action="<?php echo URL ?>admin/posts/ajax/post_handler.php">
+                                                
+                                                    <div class="col-lg-11">
+                                                        <select class="form-control select2" name="cities[]" multiple>
+                                                            <?php 
+                                                                $select_city = mysqli_query($localhost, "SELECT * FROM `cities` "); 
+                                                                while($fetch_cities = mysqli_fetch_array($select_city)){ ?>
+                                                                    <option value="<?php echo $fetch_cities['id'] ?>" 
+                                                                            <?php echo doSelectInArray($selectedCitiesArray, $fetch_cities['id']) ?> >
+                                                                            <?php echo $fetch_cities['name']?></option>
+                                                                <?php } ?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-1">
+                                                        <input type="hidden" name="add_cities" value="<?php echo $post_id ?>">
+                                                        <button type="submit" class="btn btn-success submit_form_no_confirm" data-validate=0>Submit</button>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <?php 
+                                            $listTypes = array(
+                                                'phone' => 'Phone',
+                                                'email' => 'Email',
+                                                'fb' => 'Facebook',
+                                                'insta' => 'Instagram',
+                                                'twitter' => 'Twitter',
+                                                'link' => 'Link',
+                                                'address' => 'Address',
+                                                'time' => 'Time',
+                                            );
+                                        ?>
+
+                                        <div class="col-lg-12">
+                                            <div class="row">
+
+                                                <form class="forms-sample" id="create_product_form"
+                                                    data-action-after=0
+                                                    data-redirect-url=""
+                                                    method="POST"
+                                                    action="<?php echo URL ?>admin/posts/ajax/post_handler.php">
+
+                                                    <div class="col-lg-12">
+                                                        <ol class="post-lists">
+                                                            
+                                                            <?php 
+                                                            $select_lists = mysqli_query($localhost, "SELECT * FROM `ad_post_list` WHERE `ad_post_id` = '$post_id' ");
+                                                            if(mysqli_num_rows($select_lists) > 0){
+
+                                                                while($fetch_list = mysqli_fetch_array($select_lists)){ ?>
+
+                                                                    <li>
+
+                                                                        <div class="input-group">
+                                                                            
+                                                                            <span class="input-group-addon">
+                                                                                <select name="list-type[]">
+                                                                                    <?php foreach ($listTypes as $key => $value) { ?>
+                                                                                        
+                                                                                        <option value="<?php echo $key ?>" <?php echo doselection($key, $fetch_list['type']) ?> ><?php echo $value ?></option>
+
+                                                                                    <?php } ?>
+                                                                                </select>
+                                                                            </span>
+                                                                            <input  name="list-detail[]" type="text" value="<?php echo $fetch_list['detail'] ?>" class="form-control" placeholder="Datail">
+                                                                            <span class="input-group-btn">
+                                                                                <button class="btn btn-danger" onclick="removeList(this)" type="button">Remove</button>
+                                                                            </span>
+                                                                        </div><!-- /input-group -->
+
+                                                                    </li>
+
+                                                                <?php } // Whule end 
+
+                                                            }else{ ?>
+                                                            
+                                                                <li>
+
+                                                                    <div class="input-group">
+                                                                        
+                                                                        <span class="input-group-addon">
+                                                                            <select name="list-type[]">
+                                                                                <?php foreach ($listTypes as $key => $value) { ?>
+                                                                                    
+                                                                                    <option value="<?php echo $key ?>"><?php echo $value ?></option>
+
+                                                                                <?php } ?>
+                                                                            </select>
+                                                                        </span>
+                                                                        <input  name="list-detail[]" type="text" class="form-control" placeholder="Datail">
+                                                                        <span class="input-group-btn">
+                                                                            <button class="btn btn-danger" onclick="removeList(this)" type="button">Remove</button>
+                                                                        </span>
+                                                                    </div><!-- /input-group -->
+
+                                                                </li>
+
+                                                                <?php  } ?>
+
+                                                            
+
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="col-lg-12">
+                                                        <input type="hidden" name="add_list" value="<?php echo $post_id ?>">
+                                                        
+                                                        <button class="btn btn-primary" onclick="addMoreList()" type="button">Add More</button>
+                                                        <button type="submit" class="btn btn-success submit_form_no_confirm" data-validate=0>Submit</button>
+                                                        <br><br><br>
+
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
                                         <div class="col-lg-12">
                                             <!-- Comments -->
                                             <h4>Comments</h4>

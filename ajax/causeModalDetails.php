@@ -27,10 +27,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             
         }
 
+        $url = URL.'cause?q='.$cause_id.'&p='.urlencode(strtolower($fetch_cause['name']));
+
         $dataArray = array(
             'title' => $fetch_cause['name'],
             'description' => $fetch_cause['description'],
-            'images' => $images_series
+            'images' => $images_series,
+            'url' => $url,
         );
         
         echo json_encode(array('result' => $result, 'message'=>$message, 'data' => $dataArray));

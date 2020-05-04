@@ -1,0 +1,1 @@
+CREATE TABLE `ad_post_list` ( `id` INT NOT NULL AUTO_INCREMENT , `ad_post_id` INT NOT NULL , `type` ENUM('phone','email','fb','link','address','insta','twitter','time') NOT NULL , `name` VARCHAR(50) NOT NULL , `detail` TINYTEXT NOT NULL , `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = MyISAM; 

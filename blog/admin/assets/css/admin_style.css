@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.min-vieport-height{
+    min-height: calc(100vh - 120px);
+}
+.center_con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Login */
+.login_logo{
+    width: 200px;
+    height: auto;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/* Login End */
+
+
+
+
+/* Blog */
+.nav-pills{
+    background:whitesmoke;
+    padding: 13px;
+}
+.hide{
+    display: none;
+}
+
+.overview_single_box{
+    padding: 20px 20px;
+}
+.overview_single_box:nth-child(even){
+    background: rgb(245, 245, 245);
+}
+.img_single_box{
+    position: relative;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 400px;
+}
+.img_single_box img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.img_single_box .fix-box{
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    background:#180c0c38;
+    padding: 4px;
+    border-radius: 7px;
+}
+.img_single_box.uploadBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(248, 248, 248);
+}
+
+.heighlight-field{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cover_img_box{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(248, 248, 248);
+    padding: 0;
+}
+.cover_img_box.promo_pic{
+    height: 800px;
+}
+.cover_img_box.img_exist .cover_img_div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fdfdfdd4;
+}
+.cover_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover_img_box.promo_pic .cover_img{
+    width: auto;
+    object-fit: scale-down;
+}

@@ -241,7 +241,11 @@ $(document).on("click",'.submit_form_no_confirm',function(e){
             if(response['result'] == 1){
                 
                 notifyMessage(response['message'],"Success", 1);
-                form.find('input').val('');
+
+                if(actionAfterSuccess > 0){
+                    form.find('input').val('');
+                }
+                
 
                 if (typeof response['redirectURL'] != "undefined") {
                     redirectUrl = response['redirectURL'];

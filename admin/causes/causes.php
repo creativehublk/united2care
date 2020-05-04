@@ -51,6 +51,9 @@ if($checkAccess == 1){
                         while($fetch_causes = mysqli_fetch_array($select_causes)){ 
                             $cause_id = $fetch_causes['id'];
 
+                            $select_donations = mysqli_query($localhost, "SELECT SUM(`amount`) AS donated FROM `donations` WHERE `cause_id` = '$cause_id' AND `trx_payment_code` = '2' ORDER BY `id` DESC ");
+                            $fetch_donation = mysqli_fetch_array($select_donations);
+
                             $thumbnail_image = "https://via.placeholder.com/200x250/d3d3d3/FFFFFF/?text=United2Care";
                             if(file_exists(ROOT_PATH."admin/uploads/causes/thumb/".$fetch_causes['thumb'])){
                                 $thumbnail_image = URL."admin/uploads/causes/thumb/".$fetch_causes['thumb'];
@@ -73,6 +76,8 @@ if($checkAccess == 1){
                                             <a href="<?php echo URL ?>/admin/causes/view_cause.php?pro_id=<?php echo $cause_id ?>">
                                                 <h4 class="heading"><?php echo $fetch_causes['name'] ?></h4>
                                             </a>
+
+                                            <h4 class="text-center">LKR <?php echo number_format($fetch_donation['donated'], 2) ?></h4>
 
                                             <div class="action_btn_box">
                                                 <a href="<?php echo URL ?>/admin/causes/edit.php?id=<?php echo $cause_id ?>" class="btn btn-primary fa fa-edit" target="_blank" title="Edit Product"></a>

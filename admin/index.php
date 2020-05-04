@@ -1,3 +1,3 @@
 <?php 
-header('location:request/kits_request.php');
+header('location:donation/donations.php');
 ?>

@@ -21,7 +21,9 @@ while($fetch_sub_categories = mysqli_fetch_array($select_sub_categories)){
             </div>
 
             <div class="col-lg-6 donateButton">
-                <a href="#donate_sec" class="scroll_sec"> <span  class="theme-btn">Donate</span> </a>
+                <a href="https://docs.google.com/forms/d/12mZmY1kFh4jEKbHAKIHLSb7cjKeUMv3TlpphYUVK9a4/edit" target="_blank" class="hide-xs"> <span  class="theme-btn">Volunteer with us</span> </a>
+                <a href="#" data-toggle="modal" data-target="#donateCashModal" > <span  class="theme-btn">Donate</span> </a>
+                <!-- <a href="<?php echo URL ?>donation"> <span  class="theme-btn">Donate</span> </a> -->
             </div>
 
         </div><!-- end of container -->

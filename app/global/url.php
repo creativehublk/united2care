@@ -24,4 +24,7 @@
     
     Define("URL",$G_global_url);
     define('ROOT_PATH', $documentRoot);
+
+    require_once ROOT_PATH.'imports/functions.php';
+
 ?>

@@ -8,11 +8,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo URL ?>admin/dashboard.php"><img src="<?php echo URL ?>admin/assets/images/logo.png" width="75"></a>
+				<a class="navbar-brand" href="<?php echo URL ?>admin/index.php"><img src="<?php echo URL ?>admin/assets/images/logo.png" width="75"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar1">
 				<ul class="nav navbar-nav">
-					<li><a href="<?php echo URL ?>admin/request/kits_request.php">Kits Requestes</a></li>
+					<li><a href="<?php echo URL ?>admin/donation/donations.php">Donations</a></li>
 					
 					<li><a href="<?php echo URL ?>admin/request/donate_request.php">Donation Requestes</a></li>
 					

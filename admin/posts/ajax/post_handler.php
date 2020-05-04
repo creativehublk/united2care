@@ -155,6 +155,74 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }// create Lead isset
 
 
+    // Update Cities
+    if(isset($_POST['add_cities'])){
+
+        $result = 0;
+        $message = "Please try again later";
+        $error = 0;
+
+        $cities = $_POST['cities'];
+        $post_id = $_POST['add_cities'];
+
+        $delete = $dbOpertionsObj->delete('ad_post_cities', array(
+            'ad_post_id' => $post_id
+        ));
+
+        foreach ($cities as $key => $city) {
+        
+            $DBResult = $dbOpertionsObj->insertData('ad_post_cities', array(
+                'ad_post_id' => $post_id,
+                'city_id' => $city
+            ));
+
+        }
+
+        $result = 1;
+        $message = "Cities has been updated";
+
+        echo json_encode( array('result'=>$result, 'message'=>$message, 'error'=>$error) );
+
+    } //add_cities
+
+    if(isset($_POST['add_list'])){
+
+
+        $result = 0;
+        $message = "Please try again later";
+        $error = 0;
+
+        $listTypes = $_POST['list-type'];
+        $list_details = $_POST['list-detail'];
+
+        $post_id = $_POST['add_list'];
+
+        $delete = $dbOpertionsObj->delete('ad_post_list', array(
+            'ad_post_id' => $post_id
+        ));
+
+        $rowCount = count($listTypes);
+        for ($i=0; $i < $rowCount; $i++) { 
+            
+            if( strlen(trim($list_details[$i])) > 0 ){
+                $DBResult = $dbOpertionsObj->insertData('ad_post_list', array(
+                    'ad_post_id' => $post_id,
+                    'type' => $listTypes[$i],
+                    'detail' => $list_details[$i],
+                    'name' => $listTypes[$i],
+                ));
+            }
+
+        }
+
+        $result = 1;
+        $message = "Detail has been updated";
+
+        echo json_encode( array('result'=>$result, 'message'=>$message, 'error'=>$error) );
+
+    } //add_list
+
+
     if(isset($_POST['delete'])){
 
         if($_POST['delete'] == "delete_post"){

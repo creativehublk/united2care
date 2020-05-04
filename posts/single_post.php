@@ -44,7 +44,7 @@ $search_keyword_view = '';
     <!-- Meta -->
     <?php #endregion
     $meta_single_page_title = $post_title.' | UNITED 2 CARE';
-    $meta_single_page_desc = $post_title.' | In this time of crisis when our community is under threat of the Corona Virus (COVID-19), hand sanitizers and masks are a basic need for everyone, and we believe that they should not be sold at a premium.';
+    $meta_single_page_desc = $fetch_post['description'].' | In this time of crisis when our community is under threat of the Corona Virus (COVID-19), hand sanitizers and masks are a basic need for everyone, and we believe that they should not be sold at a premium.';
     $meta_arr = array(
         'title' => $meta_single_page_title,
         'description' => $meta_single_page_desc,

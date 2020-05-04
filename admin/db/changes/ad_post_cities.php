@@ -1,0 +1,1 @@
+CREATE TABLE `united`.`ad_post_cities` ( `id` INT NOT NULL AUTO_INCREMENT , `ad_post_id` INT NOT NULL , `city_id` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM; 

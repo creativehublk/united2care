@@ -1,5 +1,91 @@
 <?php 
 
+function redirect($url, $permanent = false) 
+{
+    
+    header('Location: ' . $url, true, $permanent ? 301 : 302);
+
+    Exit();
+}
+
+function changeToURL($key)
+{
+
+    $formatedKey = urlencode(trim(strtolower(str_replace(" ", "-", $key))));
+
+    return $formatedKey;
+}
+
+function doactive($data1, $data2)
+{
+    if (trim($data1) == trim($data2)) {
+        return "active";
+    }
+}
+
+function comboboxSelected($data1,$data2){
+
+    if(trim($data1) == trim($data2) ){
+    return "selected";
+    }
+} // comboboxSelected End
+
+function comboboxDataArray($data,$array){
+
+    if( in_array(trim($data," "),$array) ){
+    return "selected";
+    }
+
+} // comboboxDataArray end
+
+
+function urlFriendly($data){
+
+    $data = urlencode(trim($data));
+    $data = strtolower($data);
+
+    return $data;
+
+} //urlFriendly
+
+function imageExist($imgPath, $imgName){
+
+    $result = false;
+    if(strlen($imgName) > 0){
+    $imgLocation = $imgPath.$imgName;
+    if(file_exists($imgLocation)){
+        $result = true;
+    }
+    }
+
+    return $result;
+
+} //imageExist
+
+function pickImage($imageArray, $defaultImgURL){
+
+    $selectedImageUrl = $defaultImgURL;
+
+    foreach ($imageArray as $key => $imgArr) {
+
+    if(imageExist(ROOT_PATH.$imgArr['path'], $imgArr['image'])){
+        $selectedImageUrl = URL.$imgArr['path'].$imgArr['image'];
+        break;
+    }
+    
+    }
+
+    return $selectedImageUrl;
+
+} //pickImage
+
+
+function hideArrayEmpty($array){
+    if(count($array) == 0){
+    return 'hide';
+    }
+}
+
 function checkEclusive($data){
     $exl = "";
     if(is_numeric($data)){
@@ -104,6 +190,13 @@ function getIP($ip = null, $deep_detect = TRUE){
 
 
 // Filter area functions
+function doSelectInArray($array, $id){
+
+    if(in_array($id, $array)){
+        return "selected";
+    }
+
+} //doSelectInArray
 
 function doselection($data,$check){
     if(trim($data) == trim($check)){
@@ -116,11 +209,5 @@ function docheck($data,$check){
         return "checked";
     }
 } //docheck
-
-function doactive($data,$check){
-    if(trim($data) == trim($check)){
-        return "active";
-    }
-}
 
 ?>

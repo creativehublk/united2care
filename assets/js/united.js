@@ -32,7 +32,6 @@ $(".gallery-img-slider").owlCarousel({
 } // gallery-img-slider
 
 
-
 // Cause Modal
 $(".openCausesModal").on('click', function(e) {
     e.preventDefault();
@@ -45,7 +44,7 @@ $(".openCausesModal").on('click', function(e) {
     var causeModalImages = $("#cause-modal-images");
     var causeModalDesc = $("#cause-modal-desc");
 
-    
+    var causeModalShare = $("#cause-modal-share");
 
     causeModalImages.removeClass('slick-initialized slick-slider');
 
@@ -68,6 +67,9 @@ $(".openCausesModal").on('click', function(e) {
             causeMoldaTitle.html(response.data.title);
             causeModalImages.html(response.data.images);
             causeModalDesc.html(response.data.description);
+
+            causeModalShare.attr('data-a2a-url', response.data.url);
+            causeModalShare.attr('data-a2a-title', response.data.title);
 
 
             if ($(".causes-img-slider").length) {
